@@ -13,7 +13,7 @@ namespace polyscope {
 // Base case: call the scalar version
 template <typename T>
 bool allComponentsFinite(const T& x) {
-  return std::isfinite(x);
+  return std::isfinite(static_cast<double>(x));
 }
 
 template <>
